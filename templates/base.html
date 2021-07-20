@@ -1,0 +1,608 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from trusttransport.themeebit.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 19 Jul 2021 00:12:54 GMT -->
+{% include 'frontend/fragments/head.html' %}
+<body class="home1">
+
+    <!-- preloader -->
+    <div class="preloader-bg">
+        <div class="preloader-container">
+            <div class="my-preloader"><img src="{% static 'images/favicon.png' %}" alt="preloader"></div>
+        </div>
+    </div>
+
+
+    <!--================================
+        START HEADER AREA
+    =================================-->
+
+    <!-- start header -->
+    {% include 'frontend/fragments/header_navbar.html' %}
+    <!-- start header -->
+    <!--================================
+        END HEADER AREA
+    =================================-->
+
+    <!--================================
+        START SLIDER AREA
+    =================================-->
+    <section class="slider_area">
+
+        {% block slide %}{% endblock %}
+
+        <!-- menu starts -->
+        <div class="menu_area">
+
+            <!-- container starts -->
+            {% include 'frontend/fragments/navbar.html' %}
+            <!-- /.container ends -->
+        </div>
+        <!-- menu ends -->
+    </section>
+    <!--================================
+        END SLIDER AREA
+    =================================-->
+
+    <!--================================
+        START SERVICE AREA
+    =================================-->
+    <section class="service_area section_padding reveal animated" data-anim="fadeInUpShort">
+        <!-- container start -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- section_title starts -->
+                    <div class="section_title">
+                        <div class="sub_title">
+                            <p>Service We Provide</p>
+                        </div>
+                        <div class="title"><h2>our service</h2></div>
+                    </div><!-- section_title starts -->
+                </div>
+            </div>
+
+            <!-- row start -->
+            <div class="row">
+                <!-- col start -->
+                <div class="col-md-12">
+
+                    <!-- start service wrapper -->
+                    <div class="service_wrapper">
+
+                        <!-- service slider start -->
+                        <div class="service_slider">
+
+                            <div class="single_service_wrapper">
+                                <div class="service_img">
+                                    <img src="{% static 'images/service1.jpg' %}" alt="service-img">
+                                </div>
+                                <div class="service_content">
+                                    <div class="service_title">
+                                        <a href="single_service.html"><h3>ground shipping</h3></a>
+                                    </div>
+                                    <div class="service_text">
+                                        <p>Claritas est etiam processus dynamicus sequitur the mutationem  lectorum Mirum est..  </p>
+                                    </div>
+                                    <div class="read_more">
+                                        <a href="single_service.html">read more <span class="fa fa-long-arrow-right"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="single_service_wrapper">
+                                <div class="service_img">
+                                    <img src="{% static 'images/service2.jpg' %}" alt="service-img">
+                                </div>
+                                <div class="service_content">
+                                    <div class="service_title">
+                                        <a href="single_service.html"><h3>air shipping</h3></a>
+                                    </div>
+                                    <div class="service_text">
+                                        <p>Claritas est etiam processus dynamicus sequitur the mutationem  lectorum Mirum est..  </p>
+                                    </div>
+                                    <div class="read_more">
+                                        <a href="single_service.html">read more <span class="fa fa-long-arrow-right"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="single_service_wrapper">
+                                <div class="service_img">
+                                    <img src="{% static 'images/service3.jpg' %}" alt="service-img">
+                                </div>
+                                <div class="service_content">
+                                    <div class="service_title">
+                                        <a href="single_service.html"><h3>sea delivery</h3></a>
+                                    </div>
+                                    <div class="service_text">
+                                        <p>Claritas est etiam processus dynamicus sequitur the mutationem  lectorum Mirum est..  </p>
+                                    </div>
+                                    <div class="read_more">
+                                        <a href="single_service.html">read more <span class="fa fa-long-arrow-right"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- service slider start -->
+
+                        <!-- slider control start -->
+                        <div class="slider_controller">
+                            <div class="prev"><span class="fa fa-angle-left"></span></div>
+                            <div class="next"><span class="fa fa-angle-right"></span></div>
+                        </div><!-- slider control end -->
+
+                    </div><!-- start service wrapper -->
+                </div><!-- /.col ends -->
+            </div><!-- /.row end -->
+        </div><!-- /.container start -->
+    </section>
+    <!--================================
+        END SERVICE AREA
+    =================================-->
+
+    <!--================================
+        START WHY CHOOSE US AREA
+    =================================-->
+    {% comment %} <section class="feature_area dark_bg reveal animated" data-delay="0.2s" data-anim="fadeInUpShort">
+
+        <!-- container -->
+        <div class="container">
+            <div class="col-md-6 xs_fullwidth col-xs-6 features_bg">
+                <div class="feature_wrapper section_padding">
+                    <!-- section_title starts -->
+                    <div class="section_title">
+                        <div class="sub_title">
+                            <p>Our Best Features</p>
+                        </div>
+                        <div class="title"><h2>why choose us</h2></div>
+                    </div><!-- section_title starts -->
+
+                    <div class="about_us_text">
+                        <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.
+                            Mirum est notare quam littera gothica quam nunc putamus parum claram anteposuerit.</p>
+                    </div>
+
+                    <div class="single_feature">
+                        <div class="feature_icon">
+                            <span class="fa fa-clock-o"></span>
+                        </div>
+                        <div class="feature_content">
+                            <div class="feature_title">
+                                <h4>timely delivery</h4>
+                            </div>
+                            <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
+                        </div>
+                    </div>
+
+                    <div class="single_feature">
+                        <div class="feature_icon">
+                            <span class="fa fa-plane"></span>
+                        </div>
+                        <div class="feature_content">
+                            <div class="feature_title">
+                                <h4>world wide delivery</h4>
+                            </div>
+                            <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
+                        </div>
+                    </div>
+
+                    <div class="single_feature">
+                        <div class="feature_icon">
+                            <span class="fa fa-support"></span>
+                        </div>
+                        <div class="feature_content">
+                            <div class="feature_title">
+                                <h4>24/7 hours support</h4>
+                            </div>
+                            <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container ends -->
+
+        <!-- feature starts -->
+        <div class="feature_img"></div><!-- feature ends -->
+
+    </section> {% endcomment %}
+    <!--================================
+        END WHY CHOOSE US AREA
+    =================================-->
+
+    <!--================================
+        START ABOUT US AREA
+    =================================-->
+    {% comment %} <section class="about_us_area section_padding reveal animated" data-delay="0.2s" data-anim="fadeInUpShort">
+        <!-- container starts -->
+        <div class="container">
+
+            <!-- row starts -->
+            <div class="row">
+                <!-- /.col-md-6 ends -->
+                <div class="col-md-6 xs_fullwidth col-xs-6">
+                    <!-- section_title starts -->
+                    <div class="section_title">
+                        <div class="sub_title">
+                            <p>Do You Know ?</p>
+                        </div>
+                        <div class="title"><h2>who we are ?</h2></div>
+                    </div><!-- section_title starts -->
+
+                    <div class="about_us_content">
+                        <div class="who_we_text">
+                            <p>Claritas est etiam processus dynamicus qui sequitur mutationem consuetudium lectorum.
+                                Mirum est notare quam littera gothica quam nunc putamus parum claram antep litterarum
+                                formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi qununc
+                                nobis videntur parum clari fiant sollemnes. </p>
+
+                            <p>Delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobeleifend
+                                 option congue nihil imperdiet doming id quod mazim placerat facer possim assum Typi non habent
+                                 claritatem insitam est usus legentis in iis qui facit eorum claritatem</p>
+                        </div>
+
+                        <div class="who_we_btn">
+                            <a class="trust_btn" href="about_us.html">read more</a>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-6 ends -->
+
+                <!-- /.col-md-6 starts -->
+                <div class="col-md-6 xs_fullwidth col-xs-6">
+                    <!-- section_title starts -->
+                    <div class="section_title">
+                        <div class="sub_title">
+                            <p>Ask Question</p>
+                        </div>
+                        <div class="title"><h2>faq</h2></div>
+                    </div><!-- section_title starts -->
+
+                    <!-- accrodion area starts  -->
+                    <div class="accordion_wrapper">
+                        <!-- panel-group start -->
+                        <div class="panel-group" id="accordion">
+
+                            <!-- single accprdion pnae start -->
+                            <div class="panel panel-default">
+                                <div class="single_acco_title">
+                                  <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" class="collapsed">
+                                    Mirum est notare quam littera gothica quam nunc putamus ?<span class="fa fa-plus"></span></a>
+                                  </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;" role="tablist">
+                                  <div class="panel-body"><p>Mirum est notare quam littera gothica, quam nunc putamus parum anteposuerit litterarum
+                                      formas humanitatis per seacula quarta decima et quinta deceo Eodem modo typi, qui nunc nobis videntur parum
+                                      clari, fiant sollemn</p>
+                                      <span class="acoo_icon fa fa-truck"></span>
+                                  </div>
+                                </div>
+                            </div><!-- single accprdion pnae end -->
+
+                            <!-- single accprdion pnae start -->
+                            <div class="panel panel-default">
+                                <div class="single_acco_title">
+                                  <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="collapsed" aria-expanded="false">
+                                     Typi non habent claritatem insitam; est usus legentis ? <span class="fa fa-plus"></span></a>
+                                  </h4>
+                                </div>
+                                <div id="collapse2" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;" role="tablist">
+                                  <div class="panel-body"><p>Mirum est notare quam littera gothica, quam nunc putamus parum anteposuerit litterarum
+                                      formas humanitatis per seacula quarta decima et quinta deceo Eodem modo typi, qui nunc nobis videntur parum
+                                      clari, fiant sollemn</p>
+                                      <span class="acoo_icon fa fa-truck"></span>
+                                  </div>
+                                </div>
+                            </div><!-- single accprdion pnae end -->
+
+                            <!-- single accprdion pnae start -->
+                            <div class="panel panel-default">
+                                <div class="single_acco_title">
+                                  <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="collapsed" aria-expanded="false">
+                                    Processus dynamicus, qui sequitur mutationem cons ? <span class="fa fa-plus"></span></a>
+                                  </h4>
+                                </div>
+                                <div id="collapse3" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;" role="tablist">
+                                  <div class="panel-body"><p>Mirum est notare quam littera gothica, quam nunc putamus parum anteposuerit litterarum
+                                      formas humanitatis per seacula quarta decima et quinta deceo Eodem modo typi, qui nunc nobis videntur parum
+                                      clari, fiant sollemn</p>
+                                      <span class="acoo_icon fa fa-truck"></span>
+                                  </div>
+                                </div>
+                            </div><!-- single accprdion pnae end -->
+
+                        </div><!-- /.panel-group ends -->
+                    </div><!-- accrodion area ends  -->
+                </div><!-- /.col-md-6 ends -->
+            </div><!-- /.row ends -->
+
+        </div><!-- /.container ends -->
+    </section> {% endcomment %}
+    <!--================================
+        END ABOUT US AREA
+    =================================-->
+
+
+    <!--================================
+        START BLOG AREA
+    =================================-->
+    {% comment %} <section class="blog_area dark_bg section_padding reveal animated" data-delay="0.2s" data-anim="fadeInUpShort">
+        <!-- container start -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- section_title starts -->
+                    <div class="section_title">
+                        <div class="sub_title">
+                            <p>See Our News</p>
+                        </div>
+                        <div class="title"><h2>latest blog</h2></div>
+                    </div><!-- section_title starts -->
+                </div>
+            </div>
+
+            <!-- row start -->
+            <div class="row">
+                <!-- col start -->
+                <div class="col-md-12">
+
+                    <!-- start service wrapper -->
+                    <div class="blog_wrapper">
+
+                        <!-- service slider start -->
+                        <div class="blog_slider">
+
+                            <div class="single_blog_wrapper">
+                                <div class="blog_img">
+                                    <img src="images/blog1.jpg" alt="service-img">
+                                </div>
+
+                                <div class="blog_content">
+                                    <div class="date">
+                                        <span>FEB</span>
+                                        <span class="num">10</span>
+                                    </div>
+
+                                    <div class="blog_meta">
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-user"></span>Md.Masud</a></li>
+                                            <li><a href="#"><span class="fa fa-commenting-o"></span>250</a></li>
+                                            <li><a href="#"><span class="fa fa-heart-o"></span>120</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="blog_title">
+                                        <a href="single_news.html"><h3>Quarta Decima Etquinta</h3></a>
+                                    </div>
+                                    <div class="blog_text">
+                                        <p>Claritas est etiam processus dynamicus sequitur the  consuetudium lectorum Mirum est  </p>
+                                    </div>
+                                    <div class="read_more">
+                                        <a href="single_news.html">read more <span class="fa fa-long-arrow-right"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="single_blog_wrapper">
+                                <div class="blog_img">
+                                    <img src="images/blog2.jpg" alt="service-img">
+                                </div>
+
+                                <div class="blog_content">
+                                    <div class="date">
+                                        <span>FEB</span>
+                                        <span class="num">10</span>
+                                    </div>
+
+                                    <div class="blog_meta">
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-user"></span>Md.Salam</a></li>
+                                            <li><a href="#"><span class="fa fa-commenting-o"></span>250</a></li>
+                                            <li><a href="#"><span class="fa fa-heart-o"></span>120</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="blog_title">
+                                        <a href="single_news.html"><h3> Mirum est notare quame </h3></a>
+                                    </div>
+                                    <div class="blog_text">
+                                        <p>Claritas est etiam processus dynamicus sequitur the  consuetudium lectorum Mirum est  </p>
+                                    </div>
+                                    <div class="read_more">
+                                        <a href="single_news.html">read more <span class="fa fa-long-arrow-right"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="single_blog_wrapper">
+                                <div class="blog_img">
+                                    <img src="images/blog3.jpg" alt="service-img">
+                                </div>
+
+                                <div class="blog_content">
+                                    <div class="date">
+                                        <span>FEB</span>
+                                        <span class="num">10</span>
+                                    </div>
+
+                                    <div class="blog_meta">
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-user"></span>Md.Salam</a></li>
+                                            <li><a href="#"><span class="fa fa-commenting-o"></span>250</a></li>
+                                            <li><a href="#"><span class="fa fa-heart-o"></span>120</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="blog_title">
+                                        <a href="single_news.html"><h3>Quarta Decima Etquinta</h3></a>
+                                    </div>
+                                    <div class="blog_text">
+                                        <p>Claritas est etiam processus dynamicus sequitur the  consuetudium lectorum Mirum est  </p>
+                                    </div>
+                                    <div class="read_more">
+                                        <a href="single_news.html">read more <span class="fa fa-long-arrow-right"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- service slider start -->
+
+                        <!-- slider control start -->
+                        <div class="slider_controller">
+                            <div class="prev"><span class="fa fa-angle-left"></span></div>
+                            <div class="next"><span class="fa fa-angle-right"></span></div>
+                        </div><!-- slider control end -->
+
+                    </div><!-- start service wrapper -->
+                </div><!-- /.col ends -->
+            </div><!-- /.row end -->
+        </div><!-- /.container start -->
+    </section> {% endcomment %}
+    <!--================================
+        END BLOG AREA
+    =================================-->
+
+    <!--================================
+        START TESTIMONIAL AREA
+    =================================-->
+    {% comment %} <section class="testimonial_area section_padding reveal animated" data-delay="0.2s" data-anim="fadeInUpShort">
+        <!-- container starts -->
+        <div class="container">
+            <!-- row start -->
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- section_title starts -->
+                    <div class="section_title title_center">
+                        <div class="sub_title">
+                            <p>What Our Clients Say</p>
+                        </div>
+                        <div class="title"><h2>testimonials</h2></div>
+                    </div><!-- section_title starts -->
+                </div>
+            </div><!-- /.row end -->
+
+            <!-- row starts -->
+            <div class="row">
+                <!-- col-md-12 starts -->
+                <div class="col-md-12">
+                    <div class="testimonial_slider_wrapper">
+                        <div class="testimonial_slider">
+                            <div class="single_slider">
+                                <div class="testimonial">
+                                    <p>Placerat facer possim assum. Typi non habent claritatem insitam est usulegentis in iis qui
+                                        facit eorum claritatem. Investigationes demonstrav erunt lectores legere me lius quod ii
+                                        legunt saepius. Claritas est etiam processus <span class="quote fa fa-quote-right"></span>
+                                    </p>
+                                </div>
+                                <div class="person_about">
+                                    <div class="image">
+                                        <img src="images/testimonial1.png" alt="testimonial-img">
+                                    </div>
+                                    <div class="desig">
+                                        <p class="name">Md.Salam</p>
+                                        <span>Web Developer</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_slider">
+                                <div class="testimonial">
+                                    <p>Placerat facer possim assum. Typi non habent claritatem insitam est usulegentis in iis qui
+                                        facit eorum claritatem. Investigationes demonstrav erunt lectores legere me lius quod ii
+                                        legunt saepius. Claritas est etiam processus <span class="quote fa fa-quote-right"></span>
+                                    </p>
+                                </div>
+                                <div class="person_about">
+                                    <div class="image">
+                                        <img src="images/testimonial2.png" alt="testimonial-img">
+                                    </div>
+                                    <div class="desig">
+                                        <p class="name">Shahadat Hossain</p>
+                                        <span>Web Developer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-12 starts -->
+            </div><!-- /.row ends -->
+        </div><!-- /.container ends -->
+    </section> {% endcomment %}
+    <!--================================
+        END TESTIMONIAL AREA
+    =================================-->
+
+
+    <!--================================
+        START CALL TO ACTION
+    =================================-->
+    {% comment %} <section class="call_to_action reveal animated" data-delay="0.2s" data-anim="fadeInUpShort">
+        <div class="container">
+            <div class="col-md-7 xs_fullwidth col-xs-8 v_middle">
+                <div class="call_to_action_title">
+                    <h3>need emergency transportaion</h3>
+                </div>
+                <p>Placerat facer possim assum Typi non habent s legentis in iis qui facit eorum</p>
+            </div>
+            <div class="col-md-5 xs_fullwidth col-xs-3 v_middle">
+                <div class="call_to_action_btn">
+                    <a class="trust_btn" href="contact.html">contact us</a>
+                </div>
+            </div>
+        </div>
+    </section> {% endcomment %}
+    <!--================================
+        END CALL TO ACTION
+    =================================-->
+
+
+
+    <!--================================
+        START PARTNER
+    =================================-->
+
+    {% comment %} <section class="partner_area section_padding reveal animated" data-delay="0.2s" data-anim="fadeInUpShort">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="partner_wrapper">
+                        <div class="partner_slider">
+                            <div class="partner">
+                                <img src="images/partner1.png" alt="">
+                            </div>
+                            <div class="partner">
+                                <img src="images/partner2.png" alt="">
+                            </div>
+                            <div class="partner">
+                                <img src="images/partner1.png" alt="">
+                            </div>
+                            <div class="partner">
+                                <img src="images/partner2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> {% endcomment %}
+
+    <!--================================
+        END PARTNER
+    =================================-->
+
+    <!--================================
+        START FOOTER
+    =================================-->
+    {% include 'frontend/fragments/footer.html' %}
+    <!--================================
+        END FOOTER
+    =================================-->
+
+    <!--//////////////////// JS GOES HERE ////////////////-->
+
+    <!-- jquery latest version -->
+  {% include 'frontend/fragments/scripts.html' %}
+</body>
+
+<!-- Mirrored from trusttransport.themeebit.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 19 Jul 2021 00:14:38 GMT -->
+</html>

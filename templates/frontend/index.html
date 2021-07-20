@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block slide %}
+
+        <!-- slider starts  -->
+        <div class="sliders">
+
+            <!-- hero slides -->
+            <div class="hero_sliders">
+
+                <!-- single hero_slide -->
+                <div class="hero_slide" data-src="{% static 'images/slider_1.jpg' %}">
+                    <div class="captions_wrapper right">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-4">
+                                    <div class="single_slider_wrapper">
+                                        <span class="small_title fadeInRightShort animated">FAST DELIVERY</span><br>
+                                        <h1 class="big_title fadeInRightShort animated">trust is world wide transport service</h1>
+                                        <div class="hero_btn">
+                                            <a href="#" class="trust_btn">see more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- single hero_slide -->
+
+                <!-- single hero_slide -->
+                <div class="hero_slide" data-src="{% static 'images/slider_2.jpg' %}">
+                    <div class="captions_wrapper left">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="single_slider_wrapper">
+                                        <span class="small_title fadeInLeftShort animated">FAST DELIVERY</span><br>
+                                        <h1 class="big_title fadeInLeftShort animated">trust is world wide transport service</h1>
+                                        <div class="hero_btn">
+                                            <a href="#" class="trust_btn">see more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- single hero_slide -->
+
+            </div>
+            <!-- ./hero slides  -->
+        </div>
+        <!-- /.sliders ends -->
+
+{% endblock %}
