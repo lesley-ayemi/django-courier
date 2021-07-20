@@ -77,8 +77,14 @@ WSGI_APPLICATION = 'logistics.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'courier_db',
+        'USER': 'postgres',
+        'PASSWORD': '12345',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+
+        # 'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -123,7 +129,13 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
+    'static',
 )
+
+#Media files
+MEDIA_URL = '/images/uploads/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images/uploads')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

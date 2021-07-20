@@ -9,26 +9,32 @@ class Shipment(models.Model):
         ('recieved', 'RECIEVED'),
     )
     INSURANCE = (
-        ('YES'),
-        ('NO'),
+        ('yes', 'YES'),
+        ('no', 'NO'),
     )
     name = models.CharField(max_length=225, null=True)
     phone = models.CharField(max_length=30, null=True)
     address = models.CharField(max_length=300, null=True)
     email = models.EmailField(max_length=225,unique=True, null=True)
     ship_code = models.CharField(max_length=225, null=True)
-    image = models.ImageField()
+    image = models.ImageField(blank=True)
+    from_name = models.CharField(max_length=225, blank=True)
     from_address = models.CharField(max_length=300, blank=True)
     description = models.TextField(blank=True)
-    price = models.DecimalField(max_digits=5, decimal_places=5)
-    insurance = models.CharField(max_length=50, choices=INSURANCE)
-    quantity = models.IntegerField(min)
+    price = models.CharField(max_length=200)
+    insurance = models.CharField(max_length=50, choices=INSURANCE, default='NO')
+    quantity = models.IntegerField()
     status = models.CharField(max_length=250, choices=STATUS, default='pending')
     date_order = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return self.name + self.ship_code
+
 
 class Track(models.Model):
-
-    shipment = models.ForeignKey(Shipment)
+    shipment = models.ForeignKey(Shipment, on_delete=models.CASCADE)
     address = models.CharField(max_length=225, blank=True)
+
+    def __str__(self):
+        return self.shipment.name
     
