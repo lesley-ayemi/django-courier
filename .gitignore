@@ -6,5 +6,5 @@ db.sqlite3
 .env
 # code editor configuration 
 .idea
-#
-__pycache__
+#pycache
+__pycache__/
