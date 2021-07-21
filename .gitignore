@@ -1,5 +1,10 @@
 #python enviromental files
 env
-
 #sqlite database
 db.sqlite3
+#.env file
+.env
+# code editor configuration 
+.idea
+#
+__pycache__

@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.home),
+    path('tracking', views.track, name='track_order')
 ]
 if settings.DEBUG:
      urlpatterns += static(settings.MEDIA_URL,

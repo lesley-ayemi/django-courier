@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block slide %}
+
+<section class="breadcrumb">
+
+        <div class="breadcrumb_content">
+            <!-- container starts -->
+            <div class="container">
+                <!-- row starts -->
+                <div class="row">
+                    <!-- col-md-12 starts -->
+                    <div class="col-md-12">
+                        <div class="breadcrumb_title_wrapper">
+                            <div class="page_title">
+                                <h1>track &amp; trace</h1>
+                            </div>
+                            <ul class="bread_crumb">
+                                <li><a href="index-2.html">Home</a></li>
+                                <li class="bread_active">Tracking</li>
+                            </ul>
+                        </div>
+                    </div><!-- col-md-12 ends -->
+                </div>
+                <!-- /.row ends -->
+            </div><!-- /.container ends -->
+        </div>
+    </section>
+
+
+{% endblock %}
+
+{% block content %}
+
+    <section class="tc_section section_padding reveal animated" data-delay="0.2s" data-anim="fadeInUpShort">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="tc_title"><h4>Please Enter Your Product Code And You Will See Your Product</h4></div>
+                    <div class="tc_form">
+                        <form action="#" method="GET">
+                            <div class="tc_input_wrapper">
+                                <input name="code" type="text" placeholder="Enter Your Tracking Code">
+                                <span class="fa fa-truck"></span>
+                                <button class="tc_btn" type="submit">enter</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock  %}
+
+{% block result %}
+<h1>Result here</h1>
+
+{% endblock %}
