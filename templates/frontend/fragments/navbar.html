@@ -99,9 +99,10 @@
                                             <div class="modal-content">
                                               <div class="modal-body">
                                                 <div class="search_form_wrapper">
-                                                    <form method="post">
+                                                    <form method="post" action="{% url 'search-order' %}">
+                                                    {% csrf_token %}
                                                         <div class="search_input">
-                                                            <input type="text" name="search_field" placeholder="Search Query...">
+                                                            <input type="search" name="searched" placeholder="Track order...">
                                                             <button class="submit_btn" type="submit">
                                                                 <span class="fa fa-search"></span>
                                                             </button>

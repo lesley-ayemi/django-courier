@@ -39,9 +39,11 @@
                 <div class="col-md-8 col-md-offset-2">
                     <div class="tc_title"><h4>Please Enter Your Product Code And You Will See Your Product</h4></div>
                     <div class="tc_form">
-                        <form action="#" method="GET">
+                        <form action="{% url 'track_order' %}" method="POST">
+                        {% csrf_token %}
                             <div class="tc_input_wrapper">
-                                <input name="code" type="text" placeholder="Enter Your Tracking Code">
+                               <input name="search" type="search" placeholder="Enter Your Tracking Code">  
+                                {% comment %} {{filter.form.ship_code}} {% endcomment %}
                                 <span class="fa fa-truck"></span>
                                 <button class="tc_btn" type="submit">enter</button>
                             </div>
@@ -56,6 +58,41 @@
 {% endblock  %}
 
 {% block result %}
-<h1>Result here</h1>
+<div class="container">
+
+{% if search %}
+<h1 class="text-center">Tracking ID: {{search}} </h1>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">address</th>
+      <th scope="col">email</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for product in products %}
+    <tr>
+      <th scope="row">1</th>
+      <td>{{product.name}}</td>
+      <td>{{product.address}}</td>
+      <td>{{product.email}}</td>
+    </tr>
+  
+  {% endfor %}
+  </tbody>
+</table>
+
+{% else %}
+
+<h1>Search for your order</h1>
+
+
+{% endif %}
+
+</div>
+
 
 {% endblock %}

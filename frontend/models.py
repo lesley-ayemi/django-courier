@@ -4,13 +4,21 @@ from django.db import models
 class Shipment(models.Model):
     STATUS = (
         ('pending', 'PENDING'),
-        ('in progress', 'IN PROGRESS'),
-        ('shipped', 'SHIPPED'),
         ('recieved', 'RECIEVED'),
+        ('awaiting', 'AWAITING CLEARANCE'),
+        ('in progress', 'IN PROGRESS'),
+        ('in transit', 'IN TRANSIT'),
+        ('shipped', 'SHIPPED'),
+        ('delivered', 'DELIVERED'),
     )
     INSURANCE = (
         ('yes', 'YES'),
         ('no', 'NO'),
+    )
+    SHIPMENT_TYPE =(
+        ('air freight', 'AIR FREIGHT'),
+        ('ocean freight', 'OCEAN FREIGHT'),
+        ('procurement', 'PROCUMENT'),
     )
     name = models.CharField(max_length=225, null=True)
     phone = models.CharField(max_length=30, null=True)
@@ -25,6 +33,7 @@ class Shipment(models.Model):
     insurance = models.CharField(max_length=50, choices=INSURANCE, default='NO')
     quantity = models.IntegerField()
     status = models.CharField(max_length=250, choices=STATUS, default='pending')
+    ship_type = models.CharField(max_length=200, choices=SHIPMENT_TYPE, default='procurement')
     date_order = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

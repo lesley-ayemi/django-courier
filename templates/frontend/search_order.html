@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if searched %}
+
+<h1>Tracking details {{ searched }}</h1>
+
+<br>
+{% for order in orders %}
+
+    {{order}} - {{order.phone}} <br>
+
+
+
+{% endfor %}
+
+{% else %}
+
+<h1>No results</h1>
+
+{% endif %}
+
+
+
+{% endblock %}
